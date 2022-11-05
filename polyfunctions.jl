@@ -1,14 +1,17 @@
 using MultivariatePolynomials 
 using Polynomials 
 using TypedPolynomials
+using LinearAlgebra
+
+# need to define those constants due to conflicts for Polynomials.Polynomial and Polynomials.degree as these functions are also defined for Multivariate polynomials
 const mvp = MultivariatePolynomials
 const p = Polynomials
 const tp = TypedPolynomials
-# need to define those constants due to conflicts for Polynomials.Polynomial and Polynomials.degree as these functions are also defined for Multivariate polynomials
-using Combinatorics
-using Permutations
-using Random
-using LinearAlgebra
+
+# using Combinatorics
+# using Permutations
+# using Random
+
 
 
 # We will define functions we need for our experiments that are not part of the packages MultivariatePolynomials or Polynomials for an intro to the most important functions of these packages take a look at the julia notebook Introduction_to_Polynomials.ipynb
