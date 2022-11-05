@@ -3,7 +3,8 @@ using Polynomials
 using TypedPolynomials
 using LinearAlgebra
 
-# need to define those constants due to conflicts for Polynomials.Polynomial and Polynomials.degree as these functions are also defined for Multivariate polynomials
+# need to define those constants due to conflicts for Polynomials.Polynomial and Polynomials.degree as these functions are also 
+# defined for Multivariate polynomials
 const mvp = MultivariatePolynomials
 const p = Polynomials
 const tp = TypedPolynomials
