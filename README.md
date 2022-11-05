@@ -19,4 +19,16 @@ both folders contain Jupyter notebooks with polynomial experiments.
 
 ### How to install and run the project
 
+Julia has to be installed on your computer. Next the communication between Julia and Jupyter has to be established, for this After the installation, click on 
+the Julia application (or type julia in your command line) then a command prompt will appear, enter the following commands in the prompt and press enter: 
+`using Pkg
+Pkg.add("IJulia")`
 
+Further the following packages need to be installed:
+
+Combinatorics 
+LinearAlgebra 
+MultivariatePolynomials 
+Permutations 
+Polynomials 
+TypedPolynomials 
