@@ -23,13 +23,19 @@ Julia has to be installed on your computer. Next the communication between Julia
 the Julia application (or type julia in your command line) then a command prompt will appear, enter the following commands in the prompt and press enter: 
 
 `using Pkg
+
 Pkg.add("IJulia")`
 
 Further the following packages need to be installed:
 
 Combinatorics 
+
 LinearAlgebra 
+
 MultivariatePolynomials 
+
 Permutations 
+
 Polynomials 
+
 TypedPolynomials 
