@@ -9,7 +9,9 @@ const p = Polynomials
 const tp = TypedPolynomials
 
 
-# We will define functions we need for our experiments that are not part of the packages MultivariatePolynomials or Polynomials for an intro to the most important functions of these packages take a look at the julia notebook Introduction_to_Polynomials.ipynb
+# We will define functions we need for our experiments that are not part of the packages MultivariatePolynomials or Polynomials
+# for an intro to the most important functions of these packages take a look at the julia notebook 
+# Introduction_to_Polynomials.ipynb
 
 
 function eye(n)
@@ -37,7 +39,11 @@ function mpRound(mvp_p,tol)
     return rounded_mvp_p
 end
 
-# We want to use functions that are only defined in Polynomials, but we cannot give it an object from multivariate polynomials as input even if the polynomial in question has only one variable. So we define a function converting a polynomial object in MultivariatePolynomials to an object in Polynomials. The coefficient function of multivar polys only returns the nonzero coefficients but if we want to construct an object in Polynomials from an object in MultivariatePolynomials we need a vector of coefficients with the 0 coefficients at the right place.
+# We want to use functions that are only defined in Polynomials, but we cannot give it an object from multivariate polynomials as
+# input even if the polynomial in question has only one variable. So we define a function converting a polynomial object in 
+# MultivariatePolynomials to an object in Polynomials. The coefficient function of multivar polys only returns the nonzero 
+# coefficients but if we want to construct an object in Polynomials from an object in MultivariatePolynomials we need a vector of 
+# coefficients with the 0 coefficients at the right place.
 
 function NonsparseCoefficientsofmp(mvp_p)
     """
@@ -69,7 +75,8 @@ function mpToUni(mvp_p)
     return uni_p
 end
 
-# there is no roots function in MultivariatePolynomials, but if we have an object in MultivariatePolynomials wiht only one variable we can still calculate the roots:
+# there is no roots function in MultivariatePolynomials, but if we have an object in MultivariatePolynomials wiht only one
+# variable we can still calculate the roots:
 
 function mpRoots(mvp_p)
     """
