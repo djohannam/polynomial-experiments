@@ -8,11 +8,6 @@ const mvp = MultivariatePolynomials
 const p = Polynomials
 const tp = TypedPolynomials
 
-# using Combinatorics
-# using Permutations
-# using Random
-
-
 
 # We will define functions we need for our experiments that are not part of the packages MultivariatePolynomials or Polynomials for an intro to the most important functions of these packages take a look at the julia notebook Introduction_to_Polynomials.ipynb
 

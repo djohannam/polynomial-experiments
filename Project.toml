@@ -2,5 +2,6 @@
 Combinatorics = "861a8166-3701-5b0c-9a16-15d98fcdc6aa"
 LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
 MultivariatePolynomials = "102ac46a-7ee4-5c85-9060-abc95bfdeaa3"
+Permutations = "2ae35dd2-176d-5d53-8349-f30d82d94d4f"
 Polynomials = "f27b6e38-b328-58d1-80ce-0feddd5e7a45"
 TypedPolynomials = "afbbf031-7a57-5f58-a1b9-b774a0fad08d"
