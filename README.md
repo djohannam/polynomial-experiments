@@ -17,21 +17,32 @@ The experiments are divided in two parts, as the thesis consists of two seperate
 
 both folders contain Jupyter notebooks with polynomial experiments.
 
-### How to install and run the project
+## Getting started
+### 1. Download and install Julia
+If Julia is not already installed, [download Julia](https://julialang.org/downloads/)  for your operating system and install it by following the instructions.
 
-Julia has to be installed on your computer. Next the communication between Julia and Jupyter has to be established, for this click on 
-the Julia application (or type `julia` in your command line) then a command prompt will appear, enter the following commands in the prompt and press enter: 
-
+### 2. Julia and Jupyter communication
+Next the communication between Julia and Jupyter has to be established.
+To do this, open a terminal window and start the Julia REPL by running:
+```
+julia
+```
+Inside the Julia REPL, next add Julia to Jupiter Notebooks by installing the Julia Kernel. To do this, run:
 ```julia
 using Pkg
 Pkg.add("IJulia")
 ```
 
-Further the following packages need to be installed:
-
-- Combinatorics 
-- LinearAlgebra 
-- MultivariatePolynomials 
-- Permutations 
-- Polynomials 
-- TypedPolynomials 
+### 3. Install project dependencies
+The project needs several third-party packages. To install all dependencies, run:
+```julia
+using Pkg
+Pkg.add([
+    "Graphs",
+    "Combinatorics",
+    "LinearAlgebra",
+    "MultivariatePolynomials",
+    "Permutations",
+    "Polynomials",
+    "TypedPolynomials"])
+```
