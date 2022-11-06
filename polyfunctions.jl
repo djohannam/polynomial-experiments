@@ -11,8 +11,6 @@ const tp = TypedPolynomials
 
 
 # We will define functions we need for our experiments that are not part of the packages MultivariatePolynomials or Polynomials
-# for an intro to the most important functions of these packages take a look at the julia notebook 
-# Introduction_to_Polynomials.ipynb
 
 
 function eye(n)
@@ -27,7 +25,7 @@ function mpRound(mvp_p,tol)
     Input: 
         mvp_p: polynomial object of MultivariatePolynomials
         tol: positive flaot (e.g tol = 1e-8)
-    Ouput:
+    Output:
         rounded_mvp_p: multivariate polynomial only containing terms with coefficients that have an absolut value > t
     """
     rounded_mvp_p = 0
@@ -52,7 +50,7 @@ function NonsparseCoefficientsofmp(mvp_p)
     we intrinsically assume that p is already univariate.
     
     Input: polynomial object of MultivariatePolynomials with only one variable
-    Ouput: polynomial object of Polynomials 
+    Output: polynomial object of Polynomials 
     """
     len = maxdegree(mvp_p)
     nonsparscoeffs = zeros(len + 1)
@@ -69,7 +67,7 @@ function mpToUni(mvp_p)
     we intrinsically assume that p is already univariate.
     
     Input: polynomial object of MultivariatePolynomials with only one variable
-    Ouput: polynomial object of Polynomials 
+    Output: polynomial object of Polynomials 
     """
     cs = NonsparseCoefficientsofmp(mvp_p)
     uni_p = p.Polynomial(cs)
@@ -85,7 +83,7 @@ function mpRoots(mvp_p)
     we intrinsically assume that p is already univariate.
     
     Input: polynomial object of MultivariatePolynomials with only one variable
-    Ouput: vector containg the roots of mvp_p
+    Output: vector containg the roots of mvp_p
     """
     uni_p = mpToUni(mvp_p) 
     return p.roots(uni_p) 
