@@ -56,7 +56,7 @@ function NonsparseCoefficientsofmp(mvp_p)
     Output: polynomial object of Polynomials 
     """
     len = maxdegree(mvp_p)
-    nonsparscoeffs = zeros(len + 1)
+    nonsparscoeffs = Vector{ComplexF64}(zeros(len + 1))
     for (i,mon) in enumerate(mvp.monomials(mvp_p))
         k = mvp.degree(mon)
         nonsparscoeffs[k+1] = mvp.coefficients(mvp_p)[i]
