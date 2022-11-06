@@ -100,8 +100,7 @@ function poly_operator_poly(p,q,a)
     Input: 
         p: polynomial object in MultivariatePolynomials
         q: polynomial object in MultivariatePolynomials
-        z: vector containing all variables occuring in p ordered according to mvp.coeffs(p) !double check if we can get rid of 
-            this input
+        z: vector containing all variables occuring in p ordered according to mvp.coeffs(p) 
     Output:
     """
     
