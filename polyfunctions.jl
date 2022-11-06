@@ -20,19 +20,22 @@ function eye(n)
     return I + zeros(n,n)
 end
 
-function mpRound(mvp_p,tol) 
+function mpRound(mvp_p, tol, s) 
     """ 
     Input: 
         mvp_p: polynomial object of MultivariatePolynomials
         tol: positive flaot (e.g tol = 1e-8)
+        s : integer
+        
     Output:
-        rounded_mvp_p: multivariate polynomial only containing terms with coefficients that have an absolut value > t
+        rounded_mvp_p: multivariate polynomial only containing terms with coefficients that have an absolut 
+            value > tol and rounds the remaining coefficents to s number of decimal places
     """
     rounded_mvp_p = 0
     cs = mvp.coefficients(mvp_p)
     for (k,monom) in enumerate(mvp.monomials(mvp_p))
         if norm(cs[k]) > tol
-            rounded_mvp_p += cs[k]*monom
+            rounded_mvp_p += round(cs[k], digits=s)*monom
         end
     end
     return rounded_mvp_p
